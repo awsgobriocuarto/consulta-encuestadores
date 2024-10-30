@@ -8,7 +8,7 @@ export default function Home() {
         <Link href="/pollsters" className="btn btn-primary mx-1">
           Consulta General
         </Link>
-        <Link href="/pollsters/27933673" className="btn btn-primary mx-1">
+        <Link href="/validacion/38477705" className="btn btn-primary mx-1">
           Consulta Personal
         </Link>
       </div>
