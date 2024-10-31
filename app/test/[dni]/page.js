@@ -6,7 +6,8 @@ export default async function Page({ params }) {
   //console.log(dni);
 
   let data = await fetch(
-    "https://script.google.com/a/macros/riocuarto.gov.ar/s/AKfycbwMM2aK7MYn3RjAB4Va_nY5jJHd4KVMN67JGpjmRt9-oj-RJC_8bnu7e0A7Z6R1IF8mmA/exec?spreadsheetId=1jm2ScmDUQLx-9AtapediMRkHrQ95ZO29tzW-x3IJ3dY&sheet=users"
+    "https://script.google.com/a/macros/riocuarto.gov.ar/s/AKfycbwMM2aK7MYn3RjAB4Va_nY5jJHd4KVMN67JGpjmRt9-oj-RJC_8bnu7e0A7Z6R1IF8mmA/exec?spreadsheetId=1jm2ScmDUQLx-9AtapediMRkHrQ95ZO29tzW-x3IJ3dY&sheet=users",
+    { cache: "no-store" }
   );
   let users = await data.json();
 
@@ -40,6 +41,8 @@ export default async function Page({ params }) {
           <div className="col-md-4">
             <Credential />
             <Unauthorized />
+            <hr />
+            <h5>Validacion</h5>
             {filteredUsers?.map((user) => (
               <div key={user.id}>
                 {user.status === "inactivo" ? (
