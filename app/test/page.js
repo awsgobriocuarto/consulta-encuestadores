@@ -1,7 +1,7 @@
 import React from "react";
 import Credential from "../components/Credential";
 
-export default function Pollsters() {
+export default function Tests() {
   return (
     <div className="vh-100 d-flex align-items-center justify-content-center text-center">
       <div className="container">

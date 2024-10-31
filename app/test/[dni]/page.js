@@ -10,9 +10,7 @@ export default async function Page({ params }) {
   );
   let users = await data.json();
 
-  const filteredUsers = users.filter(
-    (user) => user.dni === dni && user.status === "activo"
-  );
+  const filteredUsers = users.filter((user) => user.dni === dni);
   console.log(filteredUsers);
 
   return (
@@ -44,21 +42,25 @@ export default async function Page({ params }) {
             <Unauthorized />
             {filteredUsers?.map((user) => (
               <div key={user.id}>
-                <Credential
-                  id={user.id}
-                  fname={user.fname}
-                  lname={user.lname}
-                  dni={user.dni}
-                  date={user.date}
-                  survey={user.survey}
-                />
+                {user.status === "inactivo" ? (
+                  <Unauthorized />
+                ) : (
+                  <Credential
+                    id={user.id}
+                    fname={user.fname}
+                    lname={user.lname}
+                    dni={user.dni}
+                    date={user.date}
+                    survey={user.survey}
+                  />
+                )}
               </div>
             ))}
           </div>
           <div className="col-md-4">
             {users.map((user) => (
               <div key={user.id}>
-                {user.fname} {user.lname} | {user.dni} |{" "}
+                {user.fname} {user.lname} | {user.dni} | {user.status} |{" "}
                 {user.status == "activo" ? (
                   <span className="badge text-bg-success">{user.status}</span>
                 ) : (
