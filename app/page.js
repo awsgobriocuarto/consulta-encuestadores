@@ -2,15 +2,22 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="vh-100 d-flex align-items-center justify-content-center text-center">
-      <div>
-        <p className="lead text-uppercase">Encuestas Río Cuarto</p>
-        <Link href="/pollsters" className="btn btn-primary mx-1">
-          Consulta General
-        </Link>
-        <Link href="/validacion/38477705" className="btn btn-primary mx-1">
-          Consulta Personal
-        </Link>
+    <div className="home">
+      <div className="container">
+        <div className="row justify-content-center">
+          <div className="col-md-4">
+            {/* eslint-disable-next-line */}
+            <img
+              height="200"
+              src="/images/logo-color.png"
+              alt="logo"
+              className="mb-3"
+            />
+            <h5 className="text-primary text-uppercase">
+              Encuestas Río Cuarto
+            </h5>
+          </div>
+        </div>
       </div>
     </div>
   );
