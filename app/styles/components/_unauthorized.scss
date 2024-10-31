@@ -1,0 +1,16 @@
+.unauthorized {
+  .card {
+    text-align: center;
+    &-header {
+      padding: 0;
+    }
+    &-body {
+    }
+    &-message {
+      text-transform: uppercase;
+      color: white;
+      background-color: $danger;
+      padding: 8px;
+    }
+  }
+}

@@ -8,7 +8,7 @@ export default async function Page({ params }) {
   const singleUser = await fetchSingleUser(dni);
 
   return (
-    <div className="vh-100 d-flex align-items-center justify-content-center text-center">
+    <div className="">
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-4">
