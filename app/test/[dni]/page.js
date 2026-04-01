@@ -1,6 +1,6 @@
 import Credential from "@/app/components/Credential";
 import Unauthorized from "@/app/components/Unauthorized";
-import { fetchSingleUser, fetchUsers } from "@/app/lib/fectUsers";
+import { fetchSingleUser, fetchUsers } from "@/app/lib/fetchUsers";
 import Link from "next/link";
 
 export default async function Page({ params }) {
