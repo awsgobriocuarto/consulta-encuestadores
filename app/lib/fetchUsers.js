@@ -19,7 +19,7 @@ async function fetchFromSheet() {
 
   try {
     const response = await fetch(url.toString(), {
-      next: { revalidate: 15 }, // Cache for 15 seconds: fast and mostly fresh
+      cache: "no-store",
     });
 
     if (!response.ok) {
