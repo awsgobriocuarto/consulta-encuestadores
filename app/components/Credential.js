@@ -8,11 +8,10 @@ export default function Credential({ id, fname, lname, dni, date, survey }) {
           <Brand />
         </div>
         <div className="card-body">
-          <h5 className="card-message">Persona Autorizada</h5>
-          {id && (
+          {id ? (
             <>
+              <h5 className="card-message">Persona Autorizada</h5>
               <p className="card-title">{survey}</p>
-
               <p className="card-text">
                 {fname} {lname}
               </p>
@@ -22,6 +21,8 @@ export default function Credential({ id, fname, lname, dni, date, survey }) {
               <p className="card-text">{date}</p>
               <p className="card-small">Fecha</p>
             </>
+          ) : (
+            <h5 className="card-message bg-secondary">Cargando información...</h5>
           )}
         </div>
       </div>

@@ -1,5 +1,6 @@
-import React from "react";
-import Credential from "../components/Credential";
+import Unauthorized from "../components/Unauthorized";
+
+export const dynamic = "force-dynamic";
 
 export default function Pollsters() {
   return (
@@ -7,7 +8,7 @@ export default function Pollsters() {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-md-4">
-            <Credential />
+            <Unauthorized />
           </div>
         </div>
       </div>
