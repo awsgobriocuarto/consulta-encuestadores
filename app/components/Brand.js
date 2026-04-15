@@ -4,7 +4,7 @@ export default function Brand() {
   return (
     <div className="brand">
       {/* eslint-disable-next-line */}
-      <img src="/images/logo.png" alt="logo" className="img-fluid" />
+      <img src="/images/logo-gobierno-slogan-white.webp" alt="logo" className="img-fluid" />
     </div>
   );
 }

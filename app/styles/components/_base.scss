@@ -2,13 +2,15 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   //background-color: $gray-100;
 }
 
 .home {
-  //background-color: pink;
-  text-align: center;
+  background-color: $primary;
+  color: white;
+  min-height: 100vh;
   padding-top: 5%;
   text-align: center;
 }

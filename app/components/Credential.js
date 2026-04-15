@@ -3,7 +3,7 @@ import Brand from "./Brand";
 export default function Credential({ id, fname, lname, dni, date, survey, showData = true }) {
   return (
     <div className="credential">
-      <div className="card">
+      <div className="card border-primary">
         <div className="card-header">
           <Brand />
         </div>
@@ -11,8 +11,8 @@ export default function Credential({ id, fname, lname, dni, date, survey, showDa
           {id ? (
             <>
               <h5 className="card-message">Persona Autorizada</h5>
-              <p className="card-title">{survey}</p>
-              
+              <p className="card-title text-uppercase">{survey}</p>
+
               {showData && (
                 <>
                   <p className="card-text">
@@ -23,7 +23,7 @@ export default function Credential({ id, fname, lname, dni, date, survey, showDa
                   <p className="card-small">DNI</p>
                 </>
               )}
-              
+
               <p className="card-text">{date}</p>
               <p className="card-small">Fecha</p>
             </>
