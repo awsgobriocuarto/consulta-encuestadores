@@ -41,6 +41,7 @@ async function UserStatus({ dni }) {
             dni={user.dni}
             date={user.date}
             survey={user.survey}
+            showData={user.show_data === true || user.show_data === "TRUE" || user.show_data === "true"}
           />
         </div>
       ))}
