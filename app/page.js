@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Home() {
   return (
     <div className="home">
@@ -8,14 +6,14 @@ export default function Home() {
           <div className="col-md-4">
             {/* eslint-disable-next-line */}
             <img
-              height="200"
-              src="/images/logo-color.png"
+              height="80"
+              src="/images/logo-gobierno-slogan-white.webp"
               alt="logo"
-              className="mb-3"
+              className="mb-5"
             />
-            <h5 className="text-primary text-uppercase">
+            <h3 className="text-uppercase">
               Encuestas Río Cuarto
-            </h5>
+            </h3>
           </div>
         </div>
       </div>
